@@ -24,3 +24,5 @@
 > command to list all files including hidden files in the current, parent and /boot directory
 # 12-file_type
 > command to print the type of the file named iamafile in the tmp dir
+# 13-symbolic_link
+> Create a symbolic link to /bin/ls, named __ls__
