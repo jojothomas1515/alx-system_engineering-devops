@@ -20,3 +20,5 @@
 > contains command to delete /tmp/my_first_directory
 # 10-back
 > contains command to navigate to the previous working directory
+# 11-lists
+> command to list all files including hidden files in the current, parent and /boot directory
