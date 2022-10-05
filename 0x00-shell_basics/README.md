@@ -12,3 +12,7 @@
 > contains the ls -n command
 # 6-firstdirectory
 > contains the mkdir commit
+# 7-movethatfile
+> moves betty from tmp directory to /tmp/my_first_directory
+# 8-firstdelete
+> delete the betty file in /tmp/my_first_directory
