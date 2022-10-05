@@ -6,3 +6,5 @@
 > contains the cd /home command to change directory to home
 # 3-listfiles
 > contains ls -l command
+# 4-listmorefiles
+> contains the ls -la command
