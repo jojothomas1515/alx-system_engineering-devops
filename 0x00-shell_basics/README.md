@@ -16,3 +16,5 @@
 > moves betty from tmp directory to /tmp/my_first_directory
 # 8-firstdelete
 > delete the betty file in /tmp/my_first_directory
+# 9-firstdirdeletion
+> contains command to delete /tmp/my_first_directory
