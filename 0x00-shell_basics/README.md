@@ -8,3 +8,5 @@
 > contains ls -l command
 # 4-listmorefiles
 > contains the ls -la command
+# 5-listfilesdigitonly
+> contains the ls -n command
