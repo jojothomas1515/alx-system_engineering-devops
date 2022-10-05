@@ -4,3 +4,5 @@
 > contains the ls command to list files in the directory
 # 2-bring_me_home
 > contains the cd /home command to change directory to home
+# 3-listfiles
+> contains ls -l command
