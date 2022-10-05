@@ -18,3 +18,5 @@
 > delete the betty file in /tmp/my_first_directory
 # 9-firstdirdeletion
 > contains command to delete /tmp/my_first_directory
+# 10-back
+> contains command to navigate to the previous working directory
