@@ -10,3 +10,5 @@
 > contains the ls -la command
 # 5-listfilesdigitonly
 > contains the ls -n command
+# 6-firstdirectory
+> contains the mkdir commit
