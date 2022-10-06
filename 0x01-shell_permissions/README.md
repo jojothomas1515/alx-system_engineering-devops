@@ -8,3 +8,6 @@
 
 ## 2-groups
 > contain command that print out the groups of thw current user
+
+## 3-new_owner
+> contains command that changes the ownership of hello file to betty's
