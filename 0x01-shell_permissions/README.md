@@ -29,3 +29,6 @@
 
 ## 9-John_Doe
 > set chmod to 753
+
+## 10-mirror_permissions
+> set permissions from other files permission
