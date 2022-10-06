@@ -16,4 +16,7 @@
 > contains commant that create and empty file called hello
 
 ## 5-execute
-> contains command that add the execute permission to the owner of the file 
+> contains command that add the execute permission to the owner of the file
+
+## 6-multiple_permissions
+> contains command to adds execute permission to the owner and the group owner, and read permission to other users, to the file hello
