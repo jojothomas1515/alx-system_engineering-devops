@@ -23,3 +23,6 @@
 
 ## 7-everybody
 > contains adds execution permission to the owner, the group owner and the other users, to the file hello
+
+## 8-James_Bond
+> contains command that gives all permission to only others
