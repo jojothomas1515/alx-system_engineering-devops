@@ -34,4 +34,7 @@
 > set permissions from other files permission
 
 ## 11-directories_permissions
-> command to set execute permissions to directory 
+> command to set execute permissions to directory
+
+## 12-directory_permissions
+> command to make dir with specific permissions
