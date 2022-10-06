@@ -32,3 +32,6 @@
 
 ## 10-mirror_permissions
 > set permissions from other files permission
+
+## 11-directories_permissions
+> command to set execute permissions to directory 
