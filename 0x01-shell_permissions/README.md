@@ -38,3 +38,6 @@
 
 ## 12-directory_permissions
 > command to make dir with specific permissions
+
+## 13-change_group
+> change group owner to school for file hello
