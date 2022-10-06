@@ -26,3 +26,6 @@
 
 ## 8-James_Bond
 > contains command that gives all permission to only others
+
+## 9-John_Doe
+> set chmod to 753
