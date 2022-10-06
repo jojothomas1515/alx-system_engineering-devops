@@ -11,3 +11,6 @@
 
 ## 3-new_owner
 > contains command that changes the ownership of hello file to betty's
+
+## 4-empty
+> contains commant that create and empty file called hello
