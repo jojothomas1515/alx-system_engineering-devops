@@ -14,3 +14,6 @@
 
 ## 4-empty
 > contains commant that create and empty file called hello
+
+## 5-execute
+> contains command that add the execute permission to the owner of the file 
