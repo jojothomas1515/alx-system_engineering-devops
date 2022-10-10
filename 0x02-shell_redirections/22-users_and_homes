@@ -1,2 +1,2 @@
 #!/bin/bash
-cat /etc/passwd |grep -E -o -e "[A-Za-z]+(:/).*" | sort -b -d --ignore-case
+cat /etc/passwd |grep -E -o -e "[A-Za-z]+(:/).*" | sort
