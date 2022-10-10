@@ -1,0 +1,3 @@
+#!/bin/bash
+cat /etc/passwd |grep -E -o -e "[A-Za-z]+(:/).*"
+
