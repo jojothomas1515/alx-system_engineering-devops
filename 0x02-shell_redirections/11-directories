@@ -1,2 +1,2 @@
 #!/bin/bash
-ls  -da /*/* | wc -w
+ls  -da ./*/* | wc -w
