@@ -1,2 +1,2 @@
 #!/bin/bash
-cat iacta > tmp | tail -n 1 tmp >> tmp | cat tmp
+tail -n 1 iacta >> iacta
