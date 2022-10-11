@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%s " |tr " " "\n" |  egrep -v "oo"
+printf "%s\n" |  egrep -v "oo"
