@@ -1,2 +1,2 @@
 #!/bin/bash
-printenv | tr ":" "\n" | egrep "[A-Z]" 
+set
