@@ -1,0 +1,2 @@
+#!/bin/bash
+printenv |tr ":" "\n"| grep -E -e "^[A-Z]"
