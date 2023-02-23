@@ -2,7 +2,7 @@
 #display the clock
 
 i=0
-while ((i < 12));
+while ((i <= 12));
 do
     j=1
     echo "Hour: $i"
