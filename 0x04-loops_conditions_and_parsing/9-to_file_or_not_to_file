@@ -7,7 +7,7 @@ if [ -e $fn ];
 then
     echo "school file exists"
     
-    if [ -z "$(cat $fn)" ];
+    if [ ! -s "$fn" ];
     then
         echo "school file is empty"
     else
