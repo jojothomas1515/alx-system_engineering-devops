@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+# while loop for best school
 i=0
 
 while [ $i -lt 10 ];
