@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# process and pid
+
+pidfile="/var/run/myscript.pid"
+
+trap "echo 'Y U no love me?!'" 2
+trap "echo 'I hate the kill command';cleanup" 15
+
+cleanup()
+{
+    rm $pidfile
+    exit 0
+}
+
+touch $pidfile
+
+while true;do
+    sleep 2
+    echo "To infinity and beyond"
+done
