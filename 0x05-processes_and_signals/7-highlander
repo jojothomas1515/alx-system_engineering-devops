@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#infinity and beyond with trap
+
+cleanup()
+{
+    echo "I am invincible!!!"
+}
+
+trap cleanup 15
+
+while ((1));
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
