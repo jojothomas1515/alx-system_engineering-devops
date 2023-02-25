@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# stops to infinity and beyond
+
+ps -ux | awk ' /4-to_infinity_and_beyond/ {print $2}' |xargs kill  
