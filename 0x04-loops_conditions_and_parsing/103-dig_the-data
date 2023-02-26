@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # dig the data
 
-./script.awk apache-access.log
+awk '{count[$1" "$9]++} END{for (char in count){print(count[char],char)|"sort -nru"}}' apache-access.log
