@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# dig the data
+
+./script.awk apache-access.log
