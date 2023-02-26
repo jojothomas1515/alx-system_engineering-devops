@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-# dig the data
-
-awk '{count[$1" "$9]++} END{for (char in count){print(count[char],char)|"sort -nru"}}' apache-access.log
+#apache access-log
+awk '{print $1,$9}' apache-access.log| sort| uniq -c| sort -r
