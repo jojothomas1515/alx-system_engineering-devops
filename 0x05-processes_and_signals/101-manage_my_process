@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# process manager
+
+start ()
+{
+    ./manage_my_process &
+    touch /var/run/my_process.pid
+    echo "manage_my_process started"
+}
+stop ()
+{
+    pkill -f manage_my_process
+    rm /var/run/my_process.pid
+    echo "manage_my_process stopped"
+}
+
+case $1 in
+    "start")
+        start
+    ;;
+    "stop")
+        stop
+    ;;
+    "restart")
+        stop & start
+esac

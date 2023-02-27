@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# deamon process
+
+while true;do
+echo "I am alive!"
+sleep 2
+done
