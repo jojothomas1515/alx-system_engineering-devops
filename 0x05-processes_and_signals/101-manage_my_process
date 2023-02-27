@@ -4,12 +4,13 @@
 start ()
 {
     ./manage_my_process &
-    touch /var/run/my_process.pid
+    echo $! >> /var/run/my_process.pid
     echo "manage_my_process started"
+    
 }
 stop ()
 {
-    pkill -f manage_my_process
+    xargs kill < /var/run/my_process.pid
     rm /var/run/my_process.pid
     echo "manage_my_process stopped"
 }
@@ -22,5 +23,5 @@ case $1 in
         stop
     ;;
     "restart")
-        stop & start
+        stop && start
 esac
