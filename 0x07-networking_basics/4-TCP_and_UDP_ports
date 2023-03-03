@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#shows listening port and the pid of the program listening
+
+netstat -pl
