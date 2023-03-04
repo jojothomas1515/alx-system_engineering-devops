@@ -23,7 +23,7 @@ int infinite_while(void)
  */
 int main(void)
 {
-	__pid_t process, status;
+	__pid_t process;
 	int i = 0;
 
 	for (i = 0; i < 5; i++)
