@@ -1,0 +1,37 @@
+A user logs on to his/her personal computer and tries to access www.foobar.com from the brower
+
+The browser first check if the it know the ip address of the domain name(in this case it does not)
+Then the browser now ask the os for the ip address of the domain, if the os does not have it, the os ask for the ip address of www.foobar.com from the dns resolver
+Then the resolver as checks if it knows the ip addr, if not , it then ask the root nameserver, the root nameserver checks , if it does not , it gives the dns resolver the address of the top level domain, the TLD give the dns resolver the address of foobar.com Authoritative name server and the dns resolver get www.foobar.com ip address from foobar.com nameserver
+
+In milliseconds the pc get the ipaddress of www.foobar.com and proceed to send a request to www.foobar.com server.
+
+The server is running a web server (nginx or apache)
+The server is running an application server
+The server is running a mysql database
+
+request get to web server through the public ip address
+the webserver channeln the request to the application server if need be
+the application server connect to the database , get data and and generate dynamic content
+the response is then sent back to the client
+
+Explanation:
+	Server: is a computer hardware or software to provide funtionality to other device know as clients
+
+	Domain Name: is a human readable text that maps to as web server public ipadress , and it is used because it is easier to remember by users and other reasons
+
+	WWW in www.foobar.com cname dns record,  and www is a subdomain in foobar.com domain name
+
+	The role of the web server is to handle and direct http request an also to add some security layer
+
+	The application server handles the logic, it process attribute passed on a request and dynamically generate response
+
+	The role of the database is to store data in a structured and efficient manner
+
+	The server is communication to the client computer  using the tcp/ip protocol
+
+SPOF: single point of failure in the design is that we're using only one server, so if the program crashes of we're having and hardware issue,
+      then the web site/service will be down it is fixed
+Deploying and Updating code will require a full web site shutdown till update is ready
+
+With it being one server too much traffic might freeze the server and services;
