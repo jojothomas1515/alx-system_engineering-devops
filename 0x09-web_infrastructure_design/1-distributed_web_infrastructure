@@ -1,0 +1,31 @@
+Explanation:
+	 2 Server: so that the trafic load can be distributed between the two server
+	 1 load balancer: the software the with assign and distribute incoming request to both server, usint the round robin algorithm
+	   		Algorithm:
+	   		      Round robin:
+			      	    	this algorithm cycle through the available server and assign request sequentually between the two servers
+
+			Mode:
+				active active:
+				       my load balancer users this mode as the help to make our service more responsive and faster since it can handle request curcurently since it using both servers
+				active passive:
+				       in this mode the on server is active and the other is just there on standby, and only kicks in when the active server fails,
+
+       Primary-Replica (Master-Slave) cluster :
+			the data in database of the active(master)  server are preriodically syncronise with the replica (slave)
+
+	difference between the Primary node and the Replica node:
+		   data receive get save in the primary node then is latter synced with the replica
+
+
+SPOF:
+	when the load balancer crashes, access to all servers are lost
+
+Security:
+	NO HTTPS mean that hacker can intercept communication between client and sever and get sensitive information since it's in plain text
+
+No Monitoring: with out this our server can go offline and we wont be aware , also no monitoring means it not position to rerun a program after crash on since we might not be aware if wr have multiple servers
+			
+
+
+
