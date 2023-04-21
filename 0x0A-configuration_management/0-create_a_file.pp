@@ -1,3 +1,4 @@
+# create a file named school in the temp folder
 file { '/tmp/school':
   content  => 'I love Puppet',
   mode     => '0744',
