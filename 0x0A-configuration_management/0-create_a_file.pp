@@ -4,5 +4,5 @@ file { '/tmp/school':
   checksum => 'md5',
   owner    => 'www-data',
   group    => 'www-data',
-  content  => 'i love puppet',
+  content  => 'I love Puppet',
   }
