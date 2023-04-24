@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# this file fixes the issue of apache web server not running
+
+sudo service apache2 start
