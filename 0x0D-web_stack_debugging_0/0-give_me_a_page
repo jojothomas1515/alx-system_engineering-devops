@@ -2,6 +2,6 @@
 
 # this file fixes the issue of apache web server not running
 
-echo "ServerName localhost" >> /etc/apache2/sites-available/000-default.conf
+echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
-docker exec vigilant_tesla service apache2 start
+service apache2 start
