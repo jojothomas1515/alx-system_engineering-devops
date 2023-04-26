@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
+
 # this file fixes the issue of apache web server not running
 
 echo "ServerName localhost" >> /etc/apache2/apache2.conf
-service apache2 restart
+
+service apache2 start
