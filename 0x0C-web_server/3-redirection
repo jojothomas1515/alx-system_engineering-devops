@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # redirect
 
-data="/redirect_me {\n return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n}"
+data="\tlocation /redirect_me {\n\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}"
 
 apt-get update
 apt install nginx -y
 echo  "Hello World!" > /var/www/html/index.html
-sed -i "s#/redirect_me#${data}#" /etc/nginx/nginx.conf
+sed -i "/server_name _;/a\ ${data}" /etc/nginx/sites-available/default
 service nginx restart
