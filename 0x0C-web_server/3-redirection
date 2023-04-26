@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# redirect
+
+data="/redirect_me {\n return 301 http://jojothomas.tech;\n}"
+
+apt-get update
+apt install nginx -y
+echo  "Hello World!" > /var/www/html/index.html
+sed -i "s#/redirect_me#${data}#" /etc/nginx/nginx.conf
+service nginx restart
