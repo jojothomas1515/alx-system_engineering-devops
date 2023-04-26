@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # redirect
 
-data="/redirect_me {\n return 301 http://jojothomas.tech;\n}"
+data="/redirect_me {\n return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n}"
 
 apt-get update
 apt install nginx -y
