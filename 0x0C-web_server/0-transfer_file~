@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-# copy file from local machine to server
-
-echo $0
