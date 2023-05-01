@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # set header
-sed -i "/server_name _;/a\ \tadd_header X-Served-By \$hostname always;" /etc/nginx/sites-available/default
+sed -i "/server_name _;/a\ \tadd_header X-Served-By \$HOSTNAME always;" /etc/nginx/sites-available/default
 service nginx reload
