@@ -6,7 +6,7 @@ add-apt-repository ppa:vbernat/haproxy-2.6 -y
 apt-get update -y
 apt-get install haproxy=2.6.\* -y
 
-frontend_config="\nfrontend myfrontend\n\tmode http\n\tbind *:80\n\tdefault_backend mybackend\n"
+frontend_config="\nfrontend myfrontend\n\tmode http\n\tbind *:80\n\toption forwardfor\n\tdefault_backend mybackend\n"
 backend_config="\n\nbackend mybackend\n\tbalance roundrobin\n\tserver web-01 34.205.65.154:80 check\n\tserver web-02 34.239.107.150:80 check"
 
 echo -e "$frontend_config" >> /etc/haproxy/haproxy.cfg
