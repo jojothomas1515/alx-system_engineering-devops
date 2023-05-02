@@ -1,20 +1,18 @@
-include stdlib
-$nginx_conf = "                                                                                                                                                               
-        add_header X-Served-By \$HOSTNAME always;                                                                                                                             
-                                                                                                                                                                              
-        error_page 404 /not_found.html;                                                                                                                                       
-                                                                                                                                                                              
-        location /redirect_me {                                                                                                                                               
-                return 301 https://jojoport.netlify.com;                                                                                                                      
-        }"
+$nginx_conf = "
+         add_header X-Served-By \$HOSTNAME always;
+         error_page 404 /not_found.html;
+         location /redirect_me {
+           return 301 https://jojoport.netlify.com;
+         }"
 
 
 package {'nginx':
   ensure   => latest,
-  provider => "apt",
+  provider => 'apt',
 }
 
-# run nginx service after install                                                                                                                                             
+# run nginx service after install
+
 service {'nginx':
   ensure  => 'running',
 }
@@ -32,10 +30,10 @@ file {'not_found.html':
 }
 
 file_line {'default':
-  path    => '/etc/nginx/sites-available/default',
-  after   => "server_name _;",
-  line    => $nginx_conf,
   ensure  => present,
+  after   => 'server_name _;',
+  line    => $nginx_conf,
+  path    => '/etc/nginx/sites-available/default',
   require => Package['nginx'],
   notify  => Service['nginx'],
 }
