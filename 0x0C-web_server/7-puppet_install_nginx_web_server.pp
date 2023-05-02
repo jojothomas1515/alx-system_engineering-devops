@@ -3,8 +3,7 @@
 $conf = "server{
   listen 80 default_server;
   listen [::]:80;
-
-  index index.html index.htm;
+  index index.html index.htm index.nginx-debian.html;
 
   server_name _;
 
@@ -25,17 +24,12 @@ $conf = "server{
     ensure   => installed,
     provider => apt,
   }
-
-  service {'nginx':
-    ensure => running,
-  }
-
-
-  file {'index.html':
+ file {'index.html':
     ensure   => file,
     checksum => 'md5',
     content  => 'Hello World!',
     path     => '/var/www/html/index.html',
+    require  => Package['nginx'],
   }
 
   file {'not_found.html':
@@ -43,6 +37,11 @@ $conf = "server{
     checksum => 'md5',
     content  => $not_found,
     path     => '/var/www/html/not_found.html'
+    require  => Package['nginx'],
+  } 
+
+  service {'nginx':
+    ensure => running,
   }
 
   file {'default':
