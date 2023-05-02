@@ -1,7 +1,7 @@
 # install and configure nginx using puppet
 
 $conf = "server{
-  listen :80 default_server;
+  listen 80 default_server;
   listen [::]:80;
 
   index index.html index.htm;
