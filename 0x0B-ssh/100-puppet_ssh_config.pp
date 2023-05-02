@@ -1,3 +1,5 @@
+#configure ssh
+
 $conf = "
 HOST *
     IdentityFile ~/.ssh/school
