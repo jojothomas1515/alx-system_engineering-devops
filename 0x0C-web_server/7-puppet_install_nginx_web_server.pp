@@ -22,13 +22,12 @@ $conf = "server{
   $not_found = "Ceci n'est pas une page"
 
   package {'nginx':
-    ensure   => latest,
-    provider => 'apt',
+    ensure   => installed,
+    provider => apt,
   }
 
   service {'nginx':
     ensure => running,
-    enable => true,
   }
 
 
