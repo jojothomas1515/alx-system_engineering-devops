@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# kill nginx process and create a proper simlink, then start the service
+pkill nginx
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default -f
+service nginx start
