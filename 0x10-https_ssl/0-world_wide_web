@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# checks domain name record type
+
+function digger {
+    
+    res_str='The subdomain %s is a %s record and points to %s\n'
+
+    if [[ -n "$2" ]]
+    then
+	declare array=("$2")
+    else
+	declare array=('www' 'lb-01' 'web-01' 'web-02')
+    fi    
+    for i in "${array[@]}"
+    do
+	dig +noall +answer "$i.$1" | awk -vres="$res_str" -vsubd="$i" '{printf res, subd, $4, $5}'
+    done
+}
+
+digger "$1" "$2"
