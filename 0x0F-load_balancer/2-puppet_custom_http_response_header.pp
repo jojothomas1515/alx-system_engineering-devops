@@ -35,31 +35,28 @@ package {'nginx':
   provider => 'apt',
 }
 
-# run nginx service after install
-
-service {'nginx':
-  ensure  => 'running',
-}
-
 file {'index.html':
   ensure   => file,
   path     => '/var/www/html/index.html',
   content  => 'Hello World!',
-  checksum => 'md5',
 }
 
 file {'not_found.html':
   ensure   => file,
   content  => "Ceci n'est pas une page",
   path     => '/var/www/html/not_found.html',
-  checksum => 'md5',
 }
 
 file {'default':
   ensure   => file,
-  checksum => 'md5',
   content  => $nginx_conf,
   path     => '/etc/nginx/sites-available/default',
   require  => Package['nginx'],
   notify   => Service['nginx'],
+}
+
+# run nginx service after install
+
+service {'nginx':
+  ensure  => 'running',
 }
