@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# run as the specified user
+
+if [[ "$#" -eq "0" ]]
+then
+   exit -1
+else
+    sudo su - "$1" -c whoami
+fi
