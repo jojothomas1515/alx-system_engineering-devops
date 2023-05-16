@@ -3,7 +3,7 @@
 
 if [[ "$#" -eq "0" ]]
 then
-   exit -1
+   exit
 else
     sudo su "$1" -c whoami
 fi
