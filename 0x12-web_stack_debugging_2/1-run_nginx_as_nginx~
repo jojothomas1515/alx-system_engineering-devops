@@ -1,0 +1,9 @@
+hello jojo#!/usr/bin/env bash
+# configuring and running nginx as nginx user
+
+# kill apache2 that is running on port 8080
+pkill apache2
+
+sed -i "s/listen 80/listen 8080/" /etc/nginx/sites-available/default
+sed -i "s/listen [::]:80/listen [::]:8080/" /etc/nginx/sites-available/default
+sed -i "1s/^/user nginx;\n"
