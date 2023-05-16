@@ -14,5 +14,5 @@ chown nginx:nginx /etc/nginx/ -R
 chmod 644 /etc/nginx/ -R
 
 # run nginx as nginx user
--u nginx service nginx start
--u nginx service nginx reload
+service nginx start
+service nginx reload
