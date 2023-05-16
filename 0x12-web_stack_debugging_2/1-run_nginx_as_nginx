@@ -6,7 +6,7 @@ pkill apache2
 
 # editing nginx configuration
 sed -i "s/listen 80 default_server;/listen 8080 default_server;/" /etc/nginx/sites-available/default
-sed -i "s/listen [::]:80 default_server ipv6only=on;/listen [::]:8080 default_server ipv6only=on;/" /etc/nginx/sites-available/default
+sed -i "s/listen \[::\]:80 default_server/listen \[::\]:8080 default_server/" /etc/nginx/sites-available/default
 sed -i "1s/^/user nginx;\n/" /etc/nginx/nginx.conf
 
 #changing ownership of nginx directory
@@ -15,5 +15,3 @@ chmod 644 /etc/nginx/ -R
 
 # run nginx as nginx user
 service nginx start
-service nginx reload
-service nginx restart
