@@ -7,11 +7,11 @@ pkill apache2
 # editing nginx configuration
 sed -i "s/listen 80/listen 8080/" /etc/nginx/sites-available/default
 sed -i "s/listen [::]:80/listen [::]:8080/" /etc/nginx/sites-available/default
-# sed -i "1s/^/user nginx;\n/" /etc/nginx/nginx.conf
+sed -i "1s/^/user nginx;\n/" /etc/nginx/nginx.conf
 
 #changing ownership of nginx directory
 chown nginx:nginx /etc/nginx/ -R
-chmod 644 /etc/nginx/ -R
+# chmod 644 /etc/nginx/ -R
 
 # run nginx as nginx user
 service nginx start
