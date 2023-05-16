@@ -11,8 +11,8 @@ sed -i "1s/^/user nginx;\n/" /etc/nginx/nginx.conf
 
 #changing ownership of nginx directory
 chown nginx:nginx /etc/nginx/ -R
-# chmod 644 /etc/nginx/ -R
+chmod 644 /etc/nginx/ -R
 
 # run nginx as nginx user
 service nginx start
-service nginx reload
+service nginx restart
