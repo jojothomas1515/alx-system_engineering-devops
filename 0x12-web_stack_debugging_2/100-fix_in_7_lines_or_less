@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # configuring and running nginx as nginx user
 pkill apache2
-sed -i "s/listen 80 default_server;\nlisten [::]:80;/listen 80;\nlisten [::]:8080;/" /etc/nginx/sites-available/default
+sed -i "s/listen 80 default_server;\nlisten [::]:80 default_server ipv6only=on;/listen 8080 default_server;\nlisten [::]:8080 default_server ipv6only=on;/" /etc/nginx/sites-available/default
 chown nginx:nginx /etc/nginx/ -R
 chmod 644 /etc/nginx/ -R
-service nginx start
+service nginx restart
