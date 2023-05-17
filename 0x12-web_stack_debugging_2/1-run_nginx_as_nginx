@@ -15,4 +15,3 @@ chmod 644 /etc/nginx/ -R
 
 # run nginx as nginx user
 service nginx start
-service nginx reload
