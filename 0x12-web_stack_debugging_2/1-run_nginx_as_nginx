@@ -14,4 +14,4 @@ chown nginx:nginx /etc/nginx/ -R
 chmod 644 /etc/nginx/ -R
 
 # run nginx as nginx user
-nginx
+sudo -u service nginx start
