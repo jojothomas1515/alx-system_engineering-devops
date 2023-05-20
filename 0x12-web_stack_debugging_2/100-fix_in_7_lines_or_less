@@ -4,4 +4,4 @@ pkill apache2
 sed -i "s/listen 80 default_server;/listen 8080 default_server;/" /etc/nginx/sites-available/default
 chown nginx:nginx /etc/nginx/ -R
 chmod 777 /etc/nginx/ -R
-sudo -u nginx service nginx restart
+sudo -u nginx service nginx start

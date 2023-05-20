@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# configuring and running nginx as nginx user
+
+# kill apache2 that is running on port 8080
+pkill apache2
+
+# editing nginx configuration
+sed -i "s/listen 80 default_server;/listen 8080 default_server;/" /etc/nginx/sites-available/default
+sed -i "s/listen \[::\]:80 default_server/listen \[::\]:8080 default_server/" /etc/nginx/sites-available/default
+sed -i "1s/^/user nginx;\n/" /etc/nginx/nginx.conf
+
+#changing ownership of nginx directory
+chown nginx:nginx /etc/nginx/ -R
+chmod 777 /etc/nginx/ -R
+
+# run nginx as nginx user
+sudo -u nginx service nginx start
