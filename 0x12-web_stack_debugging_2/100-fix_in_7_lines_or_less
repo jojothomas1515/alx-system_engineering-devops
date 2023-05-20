@@ -2,6 +2,6 @@
 # configuring and running nginx as nginx user
 pkill apache2
 sed -i "s/listen 80/listen 8080/" /etc/nginx/sites-available/default
-sed -i "1s/^/user nginx;\n/" /etc/nginx/nginx.conf
+sed -i "s/#user www-data /user nginx\n/" /etc/nginx/nginx.conf
 chmod 777 /etc/nginx/ -R
 sudo -u nginx service nginx start
