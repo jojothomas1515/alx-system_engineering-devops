@@ -21,7 +21,7 @@ def get_user_task(name: str, uid: int):
             todos)
     )
 
-    inp = {str(user_id): todo_fm}
+    inp = {str(uid): todo_fm}
 
 
 def get_info_to_json():
@@ -31,7 +31,8 @@ def get_info_to_json():
     result = {}
 
     for user in users.json():
-        result.update({user['id']: get_user_task(user['name'], user['id'])})
+        result.update({user['id']: get_user_task(user['name'],
+                                                 int(user['id']))})
 
     with open("todo_all_employees.json", "w") as f:
         json.dump(result, f)
