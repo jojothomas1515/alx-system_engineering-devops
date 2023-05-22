@@ -31,11 +31,11 @@ def get_info_to_json():
     result = {}
 
     for user in users.json():
-        result.update({str(user_id)}
-    
-    with open("{}.json".format(user_id), "w") as f:
-        json.dump(inp, f)
+        result.update({user['id']: get_user_task(user['name'], user['id'])})
 
-        
+    with open("todo_all_employees.json", "w") as f:
+        json.dump(result, f)
+
+
 if __name__ == '__main__':
     get_info_to_json()
