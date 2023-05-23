@@ -22,7 +22,7 @@ def get_user_task(name: str, uid: int):
             todos)
     )
 
-    inp = {str(uid): todo_fm}
+    return todo_fm
 
 
 def get_info_to_json():
