@@ -2,6 +2,7 @@
 
 """Rest Api."""
 
+import csv
 import requests
 import sys
 
@@ -19,15 +20,14 @@ def get_info_to_csv(user_id: int):
                         .format(user_id))
     name = user.json()['name']
     todos = info.json()
-    inp = "\"{}\",\"{}\",\"{}\",\"{}\"\n"
     with open("{}.csv".format(user_id), "w") as f:
+        handler =  csv.writer(f, quoting=csv.QUOTE_ALL)
         for task in todos:
-            f.write(
-                inp
-                .format(user_id,
-                        name,
-                        task['completed'],
-                        task['title']))
+            handler.writerow([
+                user_id,
+                name,
+                task['completed'],
+                task['title']])
 
 
 if __name__ == '__main__':
