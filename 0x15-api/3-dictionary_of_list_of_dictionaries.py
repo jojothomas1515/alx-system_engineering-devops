@@ -10,6 +10,7 @@ import sys
 def get_user_task(name: str, uid: int):
     """Get formated user task."""
 
+    print(uid)
     info = requests.get("https://jsonplaceholder.typicode.com/todos?userId={}"
                         .format(uid))
     todos = info.json()

@@ -19,7 +19,7 @@ def get_info_to_csv(user_id: int):
                         .format(user_id))
     name = user.json()['name']
     todos = info.json()
-    inp = "{},{},{},{}\n"
+    inp = "\"{}\",\"{}\",\"{}\",\"{}\"\n"
     with open("{}.csv".format(user_id), "w") as f:
         for task in todos:
             f.write(
