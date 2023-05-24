@@ -7,7 +7,7 @@ import requests
 import sys
 
 
-def get_user_task(name: str, uid: int):
+def get_user_task(username: str, uid: int):
     """Get formated user task."""
 
     print(uid)
@@ -16,7 +16,7 @@ def get_user_task(name: str, uid: int):
     todos = info.json()
     todo_fm = list(
         map(
-            lambda task: {"username": name,
+            lambda task: {"username": username,
                           "task": task['title'],
                           "completed": task['completed']},
             todos)
@@ -32,7 +32,7 @@ def get_info_to_json():
     result = {}
 
     for user in users.json():
-        result.update({user['id']: get_user_task(user['name'],
+        result.update({user['id']: get_user_task(user['username'],
                                                  int(user['id']))})
 
     with open("todo_all_employees.json", "w") as f:
