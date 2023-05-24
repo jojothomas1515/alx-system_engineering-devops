@@ -18,13 +18,13 @@ def get_info_to_csv(user_id: int):
                         .format(user_id))
     info = requests.get("https://jsonplaceholder.typicode.com/todos?userId={}"
                         .format(user_id))
-    name = user.json()['name']
+    username = user.json()['username']
     todos = info.json()
     todo_fm = list(
         map(
             lambda task: {"task": task['title'],
                           "completed": task['completed'],
-                          "username": name},
+                          "username": username},
             todos)
     )
 
