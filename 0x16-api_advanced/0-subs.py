@@ -20,9 +20,9 @@ def number_of_subscribers(subreddit):
     subscibers_count = data.get("data").get("subscribers")
 
     if subscibers_count is None:
-        print(0)
+        return (0)
     else:
-        print(subscibers_count)
+        return (subscibers_count)
 
 
 if __name__ == '__main__':
@@ -31,4 +31,4 @@ if __name__ == '__main__':
     if len(argv) != 2:
         print("This program only accepts one parameter")
         exit(-1)
-    number_of_subscribers(argv[1])
+    print(number_of_subscribers(argv[1]))
