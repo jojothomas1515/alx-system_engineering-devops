@@ -1,8 +1,11 @@
-include stdlib
+service {'apache2':
+  ensure  => running,
+  enable  => true,
+  restart => true,
+  }
 
-file_line {'fixing_type':
-  ensure => present,
-  path   => '/var/www/html/wp-settings.php',
-  line   => 'php',
-  match  => 'phpp',
-}
+exec {'sub phpp for php':
+  command => 'sed -i "s/phpp/php/" wp-settings.php',
+  path    =>  [ '/bin/', '/sbin/' , '/usr/bin/', '/usr/sbin/' ],
+  notify  => Service['apache2'],
+  }
