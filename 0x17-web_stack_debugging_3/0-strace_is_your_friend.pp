@@ -1,3 +1,4 @@
+# fixing the bug that cause internal server error by replacing the typo
 service {'apache2':
   ensure  => running,
   enable  => true,
