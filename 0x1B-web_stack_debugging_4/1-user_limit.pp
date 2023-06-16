@@ -1,6 +1,6 @@
-# add new user
+# remove holberton user limit
 
-user {'holberton':
-  ensure => present,
-  name   => 'holberton',
-}
+exec {'remove limit for holberton':
+  command  => 'sed -i "/holberton/d" /etc/security/limits.conf'
+  provider => shell,
+  }
