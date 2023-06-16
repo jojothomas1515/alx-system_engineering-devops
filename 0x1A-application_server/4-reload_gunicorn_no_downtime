@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # reload gunicorn worker processes
-pkill -HUP gunicorn
+
+pgrep gunicorn |xargs kill -HUP
